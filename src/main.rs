@@ -16,6 +16,10 @@ fn main() {
             main_fn: notes::main as fn(),
         },
         Module {
+            name: "xox",
+            main_fn: xox::main as fn(),
+        },
+        Module {
             name: "quit",
             main_fn: quit as fn(),
         },
@@ -25,7 +29,7 @@ fn main() {
     (module.main_fn)();
 }
 
-fn get_module_to_run(mods: &[Module; 2]) -> usize {
+fn get_module_to_run(mods: &[Module; 3]) -> usize {
     for (i, module) in mods.iter().enumerate() {
         println!("{}) {}", i, module.name);
     }

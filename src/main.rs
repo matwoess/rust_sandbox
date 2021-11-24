@@ -2,6 +2,7 @@ use std::process::exit;
 
 mod notes;
 mod util;
+mod xox;
 
 struct Module<'a> {
     name: &'a str,

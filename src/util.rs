@@ -1,7 +1,7 @@
 use std::io;
 use std::io::Write;
 
-pub(crate) fn prompt_for_choice() -> usize {
+pub(crate) fn prompt_for_usize() -> usize {
     let mut option = String::new();
     let _ = io::stdout().flush();
     io::stdin()

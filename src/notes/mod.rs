@@ -48,7 +48,7 @@ fn query_action(notes: &Vec<Note>) -> NoteAction {
         println!("{}) {}", i, val);
     }
     print!("What do you want to do?: ");
-    let chosen = util::prompt_for_choice();
+    let chosen = util::prompt_for_usize();
     let action = match chosen {
         0 => List,
         1 => New,
@@ -75,7 +75,7 @@ fn query_list_index(list: &&Vec<Note>) -> usize {
         return usize::MAX;
     }
     print!("Element at which index ({}..{})?: ", 0, list.len());
-    util::prompt_for_choice()
+    util::prompt_for_usize()
 }
 
 fn edit_note(notes: &mut Vec<Note>, idx: usize) {
